@@ -53,20 +53,14 @@ class ATM_Machine {
             int choice = sc.nextInt();
 
             switch (choice) {
-                case 1:
-                    withdraw();
-                    break;
-                case 2:
-                    deposit();
-                    break;
-                case 3:
-                    checkBalance();
-                    break;
-                case 4:
+                case 1 -> withdraw();
+                case 2 -> deposit();
+                case 3 -> checkBalance();
+                case 4 -> {
                     System.out.println("Thank you for using Topper World ATM. Goodbye!");
                     return;
-                default:
-                    System.out.println("Invalid option. Please choose again.");
+                }
+                default -> System.out.println("Invalid option. Please choose again.");
             }
         }
     }
@@ -142,8 +136,6 @@ public class Main {
 
         System.out.println("setting up the account ");
 
-
-
             System.out.println("Enter account number: ");
             int accountNumber = sc.nextInt();
 
@@ -156,7 +148,7 @@ public class Main {
             atm.addAccount(accountNumber, pin, balance);
             System.out.println("Account set up successfully.");
 //          k that an account is set up
-
+        atm.ATM();
 
         // If an account is set up, proceed with authentication and ATM functionality
 
