@@ -129,7 +129,6 @@ class Account {
 public class Main {
     public static void main(String[] args) {
         ATM_Machine atm = new ATM_Machine();
-//        boolean accountSet=false;
 
         atm.Introduction();
         Scanner sc = new Scanner(System.in);
@@ -147,10 +146,8 @@ public class Main {
 
             atm.addAccount(accountNumber, pin, balance);
             System.out.println("Account set up successfully.");
-//          k that an account is set up
-        atm.ATM();
 
-        // If an account is set up, proceed with authentication and ATM functionality
+        atm.ATM();
 
     }
 }
